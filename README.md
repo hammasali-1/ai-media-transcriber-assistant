@@ -1,0 +1,4 @@
+# AI Media Transcriber Assistant
+AI Media Transcriber Assistant is a modern web application that intelligently transcribes audio and video content from YouTube URLs and locally uploaded media files. After generating accurate transcriptions, users can instantly interact with the content using AI-powered question-answering, enabling deep understanding and knowledge extraction from any media source.
+
+The platform also offers flexible export options, allowing users to download transcriptions or AI-generated answers in multiple formats, including PDF, TXT, CSV, and DOCX. Designed for efficiency, accessibility, and real-world use, this application provides a powerful tool for students, researchers, content creators, and professionals who need fast and reliable transcription with intelligent insights.
