@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YouTube Transcriber</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="brand">
+          <span class="logo">YT Transcriber</span>
+          <h1 class="title">Professional Transcriber & QA</h1>
+        </div>
+        <div class="actions">
+          <button id="themeToggle" aria-label="Toggle theme">Toggle Theme</button>
+        </div>
+      </header>
+      <p class="subtitle">Transcribe YouTube or uploaded media and get executive‑style answers.</p>
+
+      <nav class="tabs">
+        <button class="tab-button active" data-tab="youtube">YouTube</button>
+        <button class="tab-button" data-tab="upload">Upload</button>
+        <button class="tab-button" data-tab="workspace">Workspace</button>
+      </nav>
+
+      <section id="tab-youtube" class="card tab-content active">
+        <h2>Transcribe from YouTube Link</h2>
+        <div class="row">
+          <input type="url" id="youtubeUrl" placeholder="Paste YouTube URL" />
+          <button id="transcribeYoutubeBtn">Transcribe YouTube</button>
+        </div>
+      </section>
+
+      <section id="tab-upload" class="card tab-content">
+        <h2>Upload Audio File</h2>
+        <div class="row">
+          <input type="file" id="audioFile" accept="audio/*,video/*" />
+          <button id="uploadTranscribeBtn">Upload & Transcribe</button>
+        </div>
+      </section>
+
+      <section id="tab-workspace" class="card tab-content">
+        <h2>Workspace</h2>
+        <div class="row">
+          <select id="formatSelect">
+            <option value="txt">TXT</option>
+            <option value="pdf">PDF</option>
+            <option value="docx">Word (DOCX)</option>
+            <option value="csv">CSV</option>
+            <option value="json">JSON</option>
+          </select>
+          <button id="downloadTranscriptBtn">Download Transcript</button>
+          <button id="downloadAnswerBtn">Download Answer</button>
+        </div>
+        <div id="status"></div>
+        <textarea id="transcript" rows="10" placeholder="Transcript will appear here..."></textarea>
+        <div class="row">
+          <input type="text" id="question" placeholder="Ask a question about the transcript" />
+          <button id="askBtn">Ask</button>
+          <button id="copyTranscriptBtn">Copy Transcript</button>
+        </div>
+        <div id="answer" class="answer"></div>
+      </section>
+
+      
+
+      <div id="loader" class="loader hidden">
+        <div class="spinner"></div>
+        <div class="loader-text">Processing...</div>
+      </div>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+  </html>
